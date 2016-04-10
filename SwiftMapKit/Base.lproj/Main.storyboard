@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SDO-gx-B1o">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MIPoliciaCDMX-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dC2-VA-QZb">
+                                <rect key="frame" x="0.0" y="29" width="320" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="8GI-pt-Tjd"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYz-JW-tUF">
+                                <rect key="frame" x="141" y="262" width="38" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="H1p-jq-5tO"/>
+                                    <constraint firstAttribute="height" constant="35" id="N9m-Ia-E1P"/>
+                                    <constraint firstAttribute="width" constant="38" id="oNV-Vh-Eow"/>
+                                </constraints>
+                                <state key="normal" title="CORRALÓN" image="corralon"/>
+                                <connections>
+                                    <segue destination="aR4-PD-2kS" kind="push" id="HnU-LL-OQa"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lkX-lc-qrM">
+                                <rect key="frame" x="0.0" y="344" width="320" height="238"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Identificador" rowHeight="30" id="mNQ-aG-XoK">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNQ-aG-XoK" id="afi-8Q-WlG">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="29"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPX-8a-cAo">
+                                <rect key="frame" x="7" y="304" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corralón" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-FO-2v1">
+                                <rect key="frame" x="115" y="304" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denuncia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-ez-7lV">
+                                <rect key="frame" x="221" y="304" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPK-5N-zUS">
+                                <rect key="frame" x="33" y="256" width="39" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="2xm-cp-vMU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="IMJ-bv-maI"/>
+                                    <constraint firstAttribute="height" constant="40" id="dpq-H8-y4P"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="39" id="uRR-H4-tLl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zAB-4C-Vl2"/>
+                                </constraints>
+                                <state key="normal" title="EMERGENCIA" image="telefono">
+                                    <color key="titleColor" red="0.13065367019999999" green="0.46941408379999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyo-0j-dK1">
+                                <rect key="frame" x="209" y="242" width="28" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwb-yT-zZR">
+                                <rect key="frame" x="101" y="241" width="28" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="5Lh-jE-myf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z64-s1-zWW">
+                                <rect key="frame" x="245" y="259" width="42" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="IUX-ba-NWD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZDC-9P-JcW"/>
+                                    <constraint firstAttribute="width" constant="42" id="pGP-ux-l4e"/>
+                                </constraints>
+                                <state key="normal" title="DENUNCIA" image="policia"/>
+                                <connections>
+                                    <segue destination="Mtm-7f-yE1" kind="push" id="cqb-q6-C00"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sPK-5N-zUS" firstAttribute="centerX" secondItem="NPX-8a-cAo" secondAttribute="centerX" id="0Yg-Es-Y9I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ULr-ez-7lV" secondAttribute="trailing" constant="-8" id="1Pd-fJ-QoY"/>
+                            <constraint firstItem="dC2-VA-QZb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5Zn-ax-kJ6"/>
+                            <constraint firstItem="dC2-VA-QZb" firstAttribute="leading" secondItem="lkX-lc-qrM" secondAttribute="leading" id="5qY-lX-4lk"/>
+                            <constraint firstItem="kYz-JW-tUF" firstAttribute="leading" secondItem="Dwb-yT-zZR" secondAttribute="trailing" constant="12" id="6pa-tS-kAX"/>
+                            <constraint firstAttribute="trailing" secondItem="dC2-VA-QZb" secondAttribute="trailing" id="8cS-gU-z3a"/>
+                            <constraint firstItem="dC2-VA-QZb" firstAttribute="trailing" secondItem="lkX-lc-qrM" secondAttribute="trailing" id="9UB-Sd-UYu"/>
+                            <constraint firstItem="gfM-FO-2v1" firstAttribute="firstBaseline" secondItem="ULr-ez-7lV" secondAttribute="firstBaseline" id="GZv-9m-WYS"/>
+                            <constraint firstItem="lkX-lc-qrM" firstAttribute="top" secondItem="Hyo-0j-dK1" secondAttribute="bottom" constant="33" id="HKy-1B-tgl"/>
+                            <constraint firstItem="ULr-ez-7lV" firstAttribute="leading" secondItem="gfM-FO-2v1" secondAttribute="trailing" constant="15" id="Iuj-2v-Oo2"/>
+                            <constraint firstItem="kYz-JW-tUF" firstAttribute="centerY" secondItem="sPK-5N-zUS" secondAttribute="centerY" constant="3.5" id="KX3-ao-kmu"/>
+                            <constraint firstItem="gfM-FO-2v1" firstAttribute="baseline" secondItem="ULr-ez-7lV" secondAttribute="baseline" id="Kfr-q5-VtC"/>
+                            <constraint firstItem="Dwb-yT-zZR" firstAttribute="leading" secondItem="NPX-8a-cAo" secondAttribute="trailing" constant="3" id="Lha-ZT-zrc"/>
+                            <constraint firstItem="sPK-5N-zUS" firstAttribute="top" secondItem="dC2-VA-QZb" secondAttribute="bottom" constant="18" id="Ms0-0I-Ywz"/>
+                            <constraint firstItem="NPX-8a-cAo" firstAttribute="baseline" secondItem="gfM-FO-2v1" secondAttribute="baseline" id="Pfc-mX-6ms"/>
+                            <constraint firstItem="gfM-FO-2v1" firstAttribute="top" secondItem="kYz-JW-tUF" secondAttribute="bottom" constant="7" id="RZH-wd-VoA"/>
+                            <constraint firstItem="Z64-s1-zWW" firstAttribute="centerX" secondItem="ULr-ez-7lV" secondAttribute="centerX" id="Roq-Cu-AVV"/>
+                            <constraint firstItem="Hyo-0j-dK1" firstAttribute="leading" secondItem="gfM-FO-2v1" secondAttribute="trailing" constant="3" id="UZN-Cv-7Y3"/>
+                            <constraint firstItem="NPX-8a-cAo" firstAttribute="top" secondItem="sPK-5N-zUS" secondAttribute="bottom" constant="8" symbolic="YES" id="XjP-sW-Neb"/>
+                            <constraint firstItem="kYz-JW-tUF" firstAttribute="centerY" secondItem="Hyo-0j-dK1" secondAttribute="centerY" constant="3" id="Zwb-HL-cB2"/>
+                            <constraint firstItem="ULr-ez-7lV" firstAttribute="top" secondItem="Z64-s1-zWW" secondAttribute="bottom" constant="4" id="aQn-Yi-RyH"/>
+                            <constraint firstItem="Dwb-yT-zZR" firstAttribute="leading" secondItem="sPK-5N-zUS" secondAttribute="trailing" constant="29" id="cPF-lx-CFk"/>
+                            <constraint firstItem="kYz-JW-tUF" firstAttribute="top" secondItem="Z64-s1-zWW" secondAttribute="top" constant="3" id="cbU-6C-JkQ"/>
+                            <constraint firstItem="dC2-VA-QZb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="29" id="dAm-E4-v7k"/>
+                            <constraint firstItem="gfM-FO-2v1" firstAttribute="centerX" secondItem="lkX-lc-qrM" secondAttribute="centerX" id="fEl-48-XPA"/>
+                            <constraint firstItem="Hyo-0j-dK1" firstAttribute="leading" secondItem="kYz-JW-tUF" secondAttribute="trailing" constant="30" id="gTt-66-8qb"/>
+                            <constraint firstItem="sPK-5N-zUS" firstAttribute="centerY" secondItem="Dwb-yT-zZR" secondAttribute="centerY" id="gte-Ad-RAO"/>
+                            <constraint firstItem="lkX-lc-qrM" firstAttribute="top" secondItem="NPX-8a-cAo" secondAttribute="bottom" constant="19" id="hQ7-Pl-UJU"/>
+                            <constraint firstItem="NPX-8a-cAo" firstAttribute="firstBaseline" secondItem="gfM-FO-2v1" secondAttribute="firstBaseline" id="l2E-E0-1MB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z64-s1-zWW" secondAttribute="trailing" constant="17" id="oyF-Xl-57s"/>
+                            <constraint firstItem="Z64-s1-zWW" firstAttribute="leading" secondItem="Hyo-0j-dK1" secondAttribute="trailing" constant="8" symbolic="YES" id="paw-jH-d4e"/>
+                            <constraint firstItem="Dwb-yT-zZR" firstAttribute="top" secondItem="dC2-VA-QZb" secondAttribute="bottom" constant="3" id="qQS-1t-R4q"/>
+                            <constraint firstItem="NPX-8a-cAo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-9" id="rsU-Xw-3o7"/>
+                            <constraint firstItem="Hyo-0j-dK1" firstAttribute="top" secondItem="dC2-VA-QZb" secondAttribute="bottom" constant="4" id="uEA-pm-Wjn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="lkX-lc-qrM" secondAttribute="bottom" constant="-14" id="x6j-V8-JYs"/>
+                            <constraint firstItem="gfM-FO-2v1" firstAttribute="leading" secondItem="NPX-8a-cAo" secondAttribute="trailing" constant="17" id="zLb-K4-SQI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MIPoliciaCDMX" id="AxF-F9-3Sg"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="mapa" destination="dC2-VA-QZb" id="ebo-cA-ASW"/>
+                        <outlet property="tablaOpciones" destination="lkX-lc-qrM" id="l3I-H1-hC5"/>
+                        <segue destination="hXN-KJ-igz" kind="push" identifier="segueFacultados" id="Lb3-ln-yST"/>
+                        <segue destination="cHk-xw-aOZ" kind="push" identifier="segueReglamento" id="YXz-Tm-WA4"/>
+                        <segue destination="SQF-Ay-nrx" kind="push" identifier="segueCuadrante" id="4t8-rd-b5B"/>
+                        <segue destination="0zn-jf-TVW" kind="push" identifier="seguePrivada" id="5pm-Vm-XYz"/>
+                        <segue destination="mPk-Ta-DTJ" kind="push" identifier="segueTuristica" id="z2L-o7-wxS"/>
+                        <segue destination="DGo-5a-Tef" kind="push" identifier="seguePoliticas" id="Hri-gj-qs5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="346"/>
+        </scene>
+        <!--Facultados para infraccionar-->
+        <scene sceneID="oqc-IQ-CDf">
+            <objects>
+                <viewController id="hXN-KJ-igz" customClass="ControladorBusquedaFacultadosInfraccionarViewController" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="okx-MD-MWJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpI-Tq-cD5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R3b-gv-5sL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 Nombre o placa del elemento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-nA-DzS">
+                                <rect key="frame" x="20" y="170" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-Gf-fgf">
+                                <rect key="frame" x="6" y="79" width="308" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Ingrese el nombre del elemento de tránsito. El listado presenta únicamente a los elementos que tienen autorización para el levantamiento de la infracción</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-uK-KcW">
+                                <rect key="frame" x="17" y="220" width="280" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="4ON-Qy-6kZ"/>
+                                </constraints>
+                                <state key="normal" title="Búsqueda">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="xAw-iT-VyG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6r-sa-3mX">
+                                <rect key="frame" x="23" y="293" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g6H-Gf-fgf" firstAttribute="centerX" secondItem="R3b-gv-5sL" secondAttribute="centerX" id="2L8-k6-xMl"/>
+                            <constraint firstItem="IlM-nA-DzS" firstAttribute="centerX" secondItem="R3b-gv-5sL" secondAttribute="centerX" id="2dX-da-bCA"/>
+                            <constraint firstItem="QmV-uK-KcW" firstAttribute="centerX" secondItem="R3b-gv-5sL" secondAttribute="centerX" id="N2R-ld-QSo"/>
+                            <constraint firstItem="b6r-sa-3mX" firstAttribute="centerX" secondItem="R3b-gv-5sL" secondAttribute="centerX" id="ObQ-E4-OqE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Facultados para infraccionar" id="rVq-d2-zRe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zg-Lm-mpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="1181"/>
+        </scene>
+        <!--Reglamento de tránsito-->
+        <scene sceneID="MBF-zD-yYU">
+            <objects>
+                <viewController id="cHk-xw-aOZ" customClass="ControladorBusquedaReglamento" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgA-XO-ShD"/>
+                        <viewControllerLayoutGuide type="bottom" id="xqT-NP-IMR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTW-46-xyF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 Palabras clave" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h67-cf-hr8">
+                                <rect key="frame" x="20" y="197" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="LE0-mS-4Uy">
+                                <rect key="frame" x="6" y="79" width="308" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Realizar una búsqueda a través de palabras claves en materia de obligaciones, prohibiciones y multas en el reglamento de tránsito del DF</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ia-gI-SEr">
+                                <rect key="frame" x="17" y="248" width="280" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Gza-Fc-vpQ"/>
+                                </constraints>
+                                <state key="normal" title="Búsqueda">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="PoL-hb-4i3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-ky-Qdw">
+                                <rect key="frame" x="74" y="159" width="172" height="30"/>
+                                <state key="normal" title="Versión completa en PDF"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV3-tl-N3M">
+                                <rect key="frame" x="20" y="321" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HV3-tl-N3M" firstAttribute="centerX" secondItem="FTW-46-xyF" secondAttribute="centerX" constant="-3" id="1xQ-iQ-2ti"/>
+                            <constraint firstItem="4ia-gI-SEr" firstAttribute="top" secondItem="h67-cf-hr8" secondAttribute="bottom" constant="21" id="5X2-zn-pIE"/>
+                            <constraint firstItem="LE0-mS-4Uy" firstAttribute="centerX" secondItem="FTW-46-xyF" secondAttribute="centerX" id="63l-XQ-r0K"/>
+                            <constraint firstItem="4ia-gI-SEr" firstAttribute="centerX" secondItem="FTW-46-xyF" secondAttribute="centerX" constant="-3" id="FXu-dy-1Dg"/>
+                            <constraint firstItem="h67-cf-hr8" firstAttribute="centerX" secondItem="HV3-tl-N3M" secondAttribute="centerX" constant="3" id="HiL-yK-rzy"/>
+                            <constraint firstItem="4ia-gI-SEr" firstAttribute="trailing" secondItem="HV3-tl-N3M" secondAttribute="trailing" constant="3" id="WKy-ks-1Pw"/>
+                            <constraint firstItem="HV3-tl-N3M" firstAttribute="top" secondItem="4ia-gI-SEr" secondAttribute="bottom" constant="34" id="jyb-Ng-IbV"/>
+                            <constraint firstItem="h67-cf-hr8" firstAttribute="centerX" secondItem="FTW-46-xyF" secondAttribute="centerX" id="lpp-7n-2Ak"/>
+                            <constraint firstItem="gkL-ky-Qdw" firstAttribute="centerX" secondItem="FTW-46-xyF" secondAttribute="centerX" id="pnn-Ei-BJc"/>
+                            <constraint firstItem="h67-cf-hr8" firstAttribute="top" secondItem="LE0-mS-4Uy" secondAttribute="bottom" constant="35" id="rEy-OU-zVK"/>
+                            <constraint firstItem="h67-cf-hr8" firstAttribute="centerX" secondItem="LE0-mS-4Uy" secondAttribute="centerX" id="yt6-s7-ln6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reglamento de tránsito" id="1HP-YK-IiY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S15-qV-rds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="1198"/>
+        </scene>
+        <!--Busca tu cuadrante-->
+        <scene sceneID="W6s-2I-Jgt">
+            <objects>
+                <viewController id="SQF-Ay-nrx" customClass="ControladorBuscaTuCuadrante" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6l-Gi-R0n"/>
+                        <viewControllerLayoutGuide type="bottom" id="5pV-vS-nUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jzc-aj-iJS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 colonia, calle o delegación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keM-pc-7cY">
+                                <rect key="frame" x="20" y="168" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Ingrese colonia, calle o delegación  y MIPolicia le mostrará los cuadrantes más cercanos" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zsw-x5-Rxw">
+                                <rect key="frame" x="6" y="77" width="308" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qK-Ic-DeW">
+                                <rect key="frame" x="23" y="291" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRV-T0-e4k">
+                                <rect key="frame" x="17" y="218" width="283" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="VBM-Ks-CQ4"/>
+                                </constraints>
+                                <state key="normal" title="Búsqueda">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="FFH-hH-mHA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zsw-x5-Rxw" firstAttribute="centerX" secondItem="Jzc-aj-iJS" secondAttribute="centerX" id="Dxx-4J-GUM"/>
+                            <constraint firstItem="keM-pc-7cY" firstAttribute="centerX" secondItem="7qK-Ic-DeW" secondAttribute="centerX" id="EGp-ah-kIF"/>
+                            <constraint firstItem="7qK-Ic-DeW" firstAttribute="top" secondItem="LRV-T0-e4k" secondAttribute="bottom" constant="34" id="EbT-ap-L3k"/>
+                            <constraint firstItem="keM-pc-7cY" firstAttribute="top" secondItem="zsw-x5-Rxw" secondAttribute="bottom" constant="8" symbolic="YES" id="HaW-5j-tFM"/>
+                            <constraint firstItem="keM-pc-7cY" firstAttribute="centerX" secondItem="Jzc-aj-iJS" secondAttribute="centerX" id="Ibg-yJ-mFG"/>
+                            <constraint firstItem="LRV-T0-e4k" firstAttribute="centerX" secondItem="Jzc-aj-iJS" secondAttribute="centerX" constant="-1.5" id="ZIN-oJ-uut"/>
+                            <constraint firstItem="7qK-Ic-DeW" firstAttribute="centerX" secondItem="Jzc-aj-iJS" secondAttribute="centerX" id="heT-U6-ZQD"/>
+                            <constraint firstItem="LRV-T0-e4k" firstAttribute="top" secondItem="keM-pc-7cY" secondAttribute="bottom" constant="20" id="oLJ-Lz-xVz"/>
+                            <constraint firstItem="keM-pc-7cY" firstAttribute="centerX" secondItem="zsw-x5-Rxw" secondAttribute="centerX" id="rXF-p0-JO4"/>
+                            <constraint firstItem="LRV-T0-e4k" firstAttribute="trailing" secondItem="7qK-Ic-DeW" secondAttribute="trailing" constant="3" id="wk9-xa-aH7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Busca tu cuadrante" id="WwI-0y-0Zf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7y-w1-9Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="1205"/>
+        </scene>
+        <!--Seguridad Privada-->
+        <scene sceneID="lVD-qY-btD">
+            <objects>
+                <viewController title="Seguridad Privada" id="0zn-jf-TVW" customClass="ControladorBusquedaSeguridadPrivada" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6VW-q1-4Jg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ibB-Li-oFV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jN4-8i-9xx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 Nombre o placa del elemento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NYz-6z-VZh">
+                                <rect key="frame" x="20" y="111" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-F8-7gT">
+                                <rect key="frame" x="17" y="161" width="280" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Q8u-cg-lTo"/>
+                                </constraints>
+                                <state key="normal" title="Búsqueda">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="aUw-X2-DTU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JR-OA-tCa">
+                                <rect key="frame" x="23" y="234" width="274" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="xLR-vy-CXd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Coloque el nombre de la empresa de seguridad privada que opera en la Ciudad de México y conozca su status" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-ce-UT1">
+                                <rect key="frame" x="3" y="29" width="308" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9JR-OA-tCa" firstAttribute="leading" secondItem="jN4-8i-9xx" secondAttribute="leadingMargin" constant="7" id="2hr-pf-56b"/>
+                            <constraint firstItem="mDk-ce-UT1" firstAttribute="centerX" secondItem="mgd-F8-7gT" secondAttribute="centerX" id="2oC-x2-uOY"/>
+                            <constraint firstItem="mgd-F8-7gT" firstAttribute="top" secondItem="NYz-6z-VZh" secondAttribute="bottom" constant="20" id="CSR-YR-hfk"/>
+                            <constraint firstItem="mDk-ce-UT1" firstAttribute="leading" secondItem="jN4-8i-9xx" secondAttribute="leadingMargin" constant="-13" id="EQn-MG-uzh"/>
+                            <constraint firstItem="mgd-F8-7gT" firstAttribute="leading" secondItem="jN4-8i-9xx" secondAttribute="leadingMargin" constant="1" id="Jjm-fz-sLc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mDk-ce-UT1" secondAttribute="trailing" constant="-7" id="K27-A0-Te4"/>
+                            <constraint firstItem="mgd-F8-7gT" firstAttribute="trailing" secondItem="9JR-OA-tCa" secondAttribute="trailing" id="OW6-ff-Fv6"/>
+                            <constraint firstItem="NYz-6z-VZh" firstAttribute="top" secondItem="mDk-ce-UT1" secondAttribute="bottom" constant="15" id="P5H-jd-fLi"/>
+                            <constraint firstItem="NYz-6z-VZh" firstAttribute="leading" secondItem="jN4-8i-9xx" secondAttribute="leadingMargin" constant="4" id="TKW-6Z-Jtv"/>
+                            <constraint firstItem="NYz-6z-VZh" firstAttribute="centerX" secondItem="9JR-OA-tCa" secondAttribute="centerX" id="ceh-fz-EZZ"/>
+                            <constraint firstItem="mDk-ce-UT1" firstAttribute="top" secondItem="6VW-q1-4Jg" secondAttribute="bottom" constant="29" id="epr-wp-NDe"/>
+                            <constraint firstItem="9JR-OA-tCa" firstAttribute="top" secondItem="mgd-F8-7gT" secondAttribute="bottom" constant="34" id="wJf-Nk-Iut"/>
+                            <constraint firstItem="ibB-Li-oFV" firstAttribute="top" secondItem="9JR-OA-tCa" secondAttribute="bottom" constant="236" id="zLy-c9-jOS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Seguridad Privada" id="Tf2-dQ-iUO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nS-iK-aEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="1195"/>
+        </scene>
+        <!--Policia Turística-->
+        <scene sceneID="J7v-x1-3Gc">
+            <objects>
+                <viewController title="Policia Turística" id="mPk-Ta-DTJ" customClass="TuristicaViewController" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KU2-4M-ffj"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9T-zw-H3E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Llv-er-vcD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefono" translatesAutoresizingMaskIntoConstraints="NO" id="lKm-Ld-0wA">
+                                <rect key="frame" x="20" y="20" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asistencia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-Au-9pz">
+                                <rect key="frame" x="81" y="33" width="79" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="31v-sB-27P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Información turistica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-QB-ouW">
+                                <rect key="frame" x="81" y="79" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="U.C.S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-hp-CRY">
+                                <rect key="frame" x="81" y="129" width="38" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Víctimas del delito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-Au-pqX">
+                                <rect key="frame" x="81" y="175" width="126" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DoK-CJ-gHj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9z-Ok-sVI">
+                                <rect key="frame" x="0.0" y="233" width="320" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Identificador2" id="io2-XQ-z9y">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="io2-XQ-z9y" id="Hnq-ga-h3x">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9Xp-Jl-30S" kind="push" id="ATY-yk-bVC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="01(800) 008 9090" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfN-kU-mwP">
+                                <rect key="frame" x="81" y="100" width="142" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QXT-0b-bGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5208 9898" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m10-db-Bt2">
+                                <rect key="frame" x="80" y="146" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="01 (800) 007 4533" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkT-dI-KOS">
+                                <rect key="frame" x="80" y="195" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m10-db-Bt2" firstAttribute="leading" secondItem="UkT-dI-KOS" secondAttribute="leading" id="0oL-HD-0vT"/>
+                            <constraint firstItem="0Hz-hp-CRY" firstAttribute="top" secondItem="DfN-kU-mwP" secondAttribute="bottom" constant="8" symbolic="YES" id="38x-vC-zzx"/>
+                            <constraint firstItem="DfN-kU-mwP" firstAttribute="top" secondItem="Rzh-QB-ouW" secondAttribute="bottom" id="736-ez-lyK"/>
+                            <constraint firstItem="g9z-Ok-sVI" firstAttribute="top" secondItem="UkT-dI-KOS" secondAttribute="bottom" constant="17" id="7na-rb-Fre"/>
+                            <constraint firstItem="m10-db-Bt2" firstAttribute="trailing" secondItem="UkT-dI-KOS" secondAttribute="trailing" id="7nx-BZ-GDC"/>
+                            <constraint firstItem="DP2-Au-9pz" firstAttribute="leading" secondItem="Rzh-QB-ouW" secondAttribute="leading" id="7x5-wI-cQ2"/>
+                            <constraint firstItem="eIw-Au-pqX" firstAttribute="top" secondItem="m10-db-Bt2" secondAttribute="bottom" constant="8" symbolic="YES" id="9bb-Zb-sw9"/>
+                            <constraint firstItem="0Hz-hp-CRY" firstAttribute="leading" secondItem="eIw-Au-pqX" secondAttribute="leading" id="B8Y-uf-tPD"/>
+                            <constraint firstItem="m10-db-Bt2" firstAttribute="top" secondItem="DfN-kU-mwP" secondAttribute="bottom" constant="25" id="CEA-rk-Pqb"/>
+                            <constraint firstItem="Rzh-QB-ouW" firstAttribute="leading" secondItem="DfN-kU-mwP" secondAttribute="leading" id="Cq7-6t-AEc"/>
+                            <constraint firstItem="lKm-Ld-0wA" firstAttribute="leading" secondItem="Llv-er-vcD" secondAttribute="leadingMargin" constant="4" id="D3m-zL-gi6"/>
+                            <constraint firstItem="Rzh-QB-ouW" firstAttribute="top" secondItem="DP2-Au-9pz" secondAttribute="bottom" constant="25" id="Dhn-LS-2ey"/>
+                            <constraint firstItem="lKm-Ld-0wA" firstAttribute="centerY" secondItem="DP2-Au-9pz" secondAttribute="centerY" id="Fhi-kx-CYL"/>
+                            <constraint firstItem="lKm-Ld-0wA" firstAttribute="top" secondItem="Llv-er-vcD" secondAttribute="top" constant="20" symbolic="YES" id="K5g-Ii-D9g"/>
+                            <constraint firstItem="DP2-Au-9pz" firstAttribute="leading" secondItem="lKm-Ld-0wA" secondAttribute="trailing" constant="13" id="M1T-qg-Sqa"/>
+                            <constraint firstItem="X9T-zw-H3E" firstAttribute="top" secondItem="g9z-Ok-sVI" secondAttribute="bottom" constant="143" id="MpK-Qn-Pip"/>
+                            <constraint firstItem="eIw-Au-pqX" firstAttribute="top" secondItem="0Hz-hp-CRY" secondAttribute="bottom" constant="28" id="P9R-Lr-j1P"/>
+                            <constraint firstItem="UkT-dI-KOS" firstAttribute="top" secondItem="m10-db-Bt2" secondAttribute="bottom" constant="28" id="azL-4n-D1C"/>
+                            <constraint firstItem="DfN-kU-mwP" firstAttribute="leading" secondItem="0Hz-hp-CRY" secondAttribute="leading" id="cGT-7l-sa8"/>
+                            <constraint firstAttribute="trailing" secondItem="g9z-Ok-sVI" secondAttribute="trailing" id="cMN-sN-6ou"/>
+                            <constraint firstItem="g9z-Ok-sVI" firstAttribute="leading" secondItem="Llv-er-vcD" secondAttribute="leading" id="eQG-AW-oNT"/>
+                            <constraint firstItem="m10-db-Bt2" firstAttribute="leading" secondItem="Llv-er-vcD" secondAttribute="leadingMargin" constant="64" id="fov-XY-uat"/>
+                            <constraint firstItem="Rzh-QB-ouW" firstAttribute="centerX" secondItem="m10-db-Bt2" secondAttribute="centerX" id="iQl-S7-gYI"/>
+                            <constraint firstItem="DP2-Au-9pz" firstAttribute="top" secondItem="KU2-4M-ffj" secondAttribute="bottom" constant="33" id="pJ7-Pb-8ze"/>
+                            <constraint firstItem="g9z-Ok-sVI" firstAttribute="top" secondItem="eIw-Au-pqX" secondAttribute="bottom" constant="37" id="rGI-bY-cbN"/>
+                            <constraint firstItem="Rzh-QB-ouW" firstAttribute="centerX" secondItem="DfN-kU-mwP" secondAttribute="centerX" id="rZn-zP-4Fh"/>
+                            <constraint firstItem="Rzh-QB-ouW" firstAttribute="trailing" secondItem="m10-db-Bt2" secondAttribute="trailing" id="u2m-VP-FNy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Policia Turística" id="kJa-GV-6wb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tablaOpciones" destination="g9z-Ok-sVI" id="uBI-dB-pYg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aC-Qo-dFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="1205"/>
+        </scene>
+        <!--Info Turistica View Controller-->
+        <scene sceneID="Ymn-Ag-KfZ">
+            <objects>
+                <viewController id="9Xp-Jl-30S" customClass="InfoTuristicaViewController" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D2A-iV-YOb"/>
+                        <viewControllerLayoutGuide type="bottom" id="1SH-y8-Wqy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uIe-b8-Cwk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6mJ-7Z-Iin">
+                                <rect key="frame" x="10" y="0.0" width="322" height="531"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iCL-gk-cLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="531"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-E2-vOZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="531"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MTV-E2-vOZ" secondAttribute="height" multiplier="301:496" id="ouc-Ug-4j6"/>
+                                                </constraints>
+                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nMf-tb-Ul3"/>
+                    <connections>
+                        <outlet property="info" destination="MTV-E2-vOZ" id="bT2-5U-cbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbL-lO-109" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="1903"/>
+        </scene>
+        <!--Políticas de privacidad-->
+        <scene sceneID="M1y-Ug-mcn">
+            <objects>
+                <viewController id="DGo-5a-Tef" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pgv-cc-ZDi"/>
+                        <viewControllerLayoutGuide type="bottom" id="yWQ-io-Abs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="789-HS-0vx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Cq-nf-9YU">
+                                <rect key="frame" x="0.0" y="64" width="320" height="10458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10458" id="4TB-zl-Jaz"/>
+                                </constraints>
+                                <mutableString key="text">La Secretaría de Seguridad Pública del Distrito Federal (en lo sucesivo “SSPDF”) pone a su disposición el uso del programa de beneficios denominado “Tarjeta de Descuentos y Beneficios Mi Policía”, mismo que consiste en el otorgamiento de promociones, descuentos sobre bienes y servicios, así como una serie de recompensas adicionales otorgadas a los Usuarios; y capacitación profesional de los Usuarios (en lo sucesivo el “Programa”), cuya utilización estará sujeta en todo momento a los presentes Términos y Condiciones de uso (en lo sucesivo los “Términos y Condiciones de Uso“).
+
+Gracias por visitar la página del programa en Internet www.997811_mipolici_cdmx.com.mx (en lo sucesivo el “Sitio”) y leer el contenido del programa a través de cualquier medio electrónico, sea correo electrónico, mensaje electrónico, o una aplicación específica del programa, entre otros (en lo sucesivo los “Medios Electrónicos”). Al tener acceso al programa a través del Sitio y/o los Medios Electrónicos, usted se obliga a sujetarse a los siguientes Términos y Condiciones de uso, sin limitación o calificación e implica la aceptación plena e incondicional de todas y cada una de las condiciones generales y particulares incluidas en este documento, de manera que le pedimos revise cuidadosamente este documento antes de seguir adelante. El solo hecho de registrarse en nuestro portal implica una aceptación total de nuestros Términos y Condiciones por lo que, si usted no pretende sujetarse legalmente a estos Términos y Condiciones de Uso, no acceda, ni use el Sitio y/o los Medios Electrónicos. En caso que los acepte y se registre conforme a lo aquí estipulado, se le atribuirá la condición de Usuario (en lo sucesivo el “Usuario” o los “Usuarios”).
+
+
+Asimismo, podrá encontrar en el Sitio información de acuerdo a los intereses de los Usuarios, tales como: (I) secciones de noticias (información general, deportes, cultura, espectáculos, clima, resumen financiero, suplementos de nutrición, salud y belleza, entre otros); (II) oferta de seguros automotrices; (III) oferta de productos financieros en línea; (IV) directorio de descuentos digital; (V) boletos para conciertos y eventos; (VI) variedad de cursos; (VII) acceso a ofertas turísticas nacionales e internacionales, entre otros.
+
+Este instrumento describe precisamente los Términos y Condiciones generales aplicables al uso de los servicios ofrecidos por SSPDF a través del programa, consistentes en (I) informar a los Usuarios respecto de los servicios, la información mencionada en el párrafo que antecede; promociones y recompensas que presta SSPDF a través del programa, (II) informar a los Usuarios sobre descuentos que se otorguen en establecimientos comerciales, y recompensas inherentes al programa.
+
+
+A través de la aceptación de los Términos y Condiciones aquí definidos, independientemente de donde tenga acceso (Sitio o Medios Electrónicos), usted se hará miembro inscrito en el programa y obtendrá todas las recompensas del mismo, tales como envío de notificaciones, avisos y promociones en forma permanente con base a sus preferencias.
+
+
+Cualquier trasgresión a estos Términos y Condiciones de Uso por parte del Usuario (incluyendo pero no limitándose a la comisión de actos que, a criterio exclusivo de la SSPDF, constituyan conductas abusivas, inapropiadas o ilícitas) generarán el derecho en favor de la SSPDF, en todo momento y sin necesidad de notificación previa de ningún tipo, suspender o terminar la prestación de los servicios y/o retirar o denegar el acceso al programa al Usuario trasgresor.
+
+El programa será utilizado únicamente para fines lícitos. El contenido, información y/o material que la SSPDF pone al alcance de los Usuarios a través del Sitio y/o los Medios Electrónicos contiene elementos amparados por normas de propiedad intelectual, incluyendo protección de software, fotografías, logos, diseños, imágenes gráficas, música y sonido, sin que esta descripción implique limitación de naturaleza alguna. Se encuentra terminantemente prohibido cualquier tipo de copia, distribución, transmisión, retransmisión, publicación, impresión, difusión y/o explotación comercial del material y/o contenido puesto a disposición del público a través del Sitio y/o los Medios Electrónicos, sin el previo consentimiento expreso y por escrito de la SSPDF o, en su caso, del titular de los derechos de propiedad correspondientes. El incumplimiento de lo aquí mencionado sujetará al infractor a todos los reclamos civiles y sanciones penales que pudieran corresponder. Asimismo, se encuentra prohibida la publicación y/o distribución de cualquier material que resulte obsceno, inapropiado, difamatorio o que pudiera resultar violatorio de los derechos de cualquier tercero o resulte contrario a las políticas generales de la SSPDF y/o al ordenamiento jurídico vigente.
+
+La SSPDF ofrece el programa a través del Sitio y/o los Medios Electrónicos sólo para permitirle determinar la disponibilidad de bienes, servicios y promociones ofrecidos en el Sitio y los Medios Electrónicos, y para ningún otro propósito. El Sitio y/o los Medios Electrónicos son para su uso personal y no comercial. Usted conviene en usar los servicios del Sitio y/o los Medios Electrónicos sólo para realizar negocios legítimos. La información de su cuenta es propiedad exclusiva de la SSPDF, aceptando de esta forma que la SSPDF acceda a toda su información, talón de pago, etcétera, para poder cumplir con el fin de enviarle todo tipo de ofertas de productos varios, ofrecimiento de créditos a través de un descuento vía nomina ya sea por medio del portal o por medio de la aplicación correspondiente. Usted debe acceder a la información de su cuenta directamente a través del Sitio o de los Medios Electrónicos y no a través de una página diferente.
+
+
+2. REGISTRO
+
+
+2.1. Para acceder al programa es necesario tener su credencial Mi Policía e inscribirse en el Sitio o a través de los Medios Electrónicos por medio de una solicitud de inscripción y llenado de los datos de registro que se establecen en el propio Sitio y/o en los Medios Electrónicos. Tal solicitud de inscripción se analizará y el requirente recibirá la notificación de la aceptación o no aceptación de su inscripción, de acuerdo con la disponibilidad de miembros, y ausencia de impedimentos de registros o de cualquier especie.
+
+
+2.2. Para que la calidad del servicio prestado vía Internet esté garantizada, es imprescindible que los Usuarios proporcionen los datos necesarios y correctos para que se efectúe el registro. La SSPDF no se responsabiliza por el llenado incorrecto de los datos.
+
+
+2.3. La SSPDF podrá a su único y exclusivo criterio no aceptar los registros de Usuarios, no teniendo la obligación de dar explicación alguna de esta decisión.
+
+
+2.4. La veracidad y autenticidad de los datos proporcionados por los Usuarios es requisito esencial para el mantenimiento del registro. En el caso de que la información proporcionada en el registro no concuerde con la realidad o resulte en cualquier tipo de ilícito, la SSPDF podrá cancelar el registro al Usuario que corresponda, sin necesidad de aviso previo y expreso.
+
+
+2.5. La SSPDF protegerá los datos personales de todos los Usuarios de conformidad con lo estipulado en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en lo sucesivo la “Ley”); el Reglamento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en lo sucesivo el “Reglamento”) y los Lineamientos del Aviso de Privacidad publicados por la Secretaría de Economía en el Diario Oficial de la Federación (en lo sucesivo los “Lineamientos”).
+
+
+Le solicitamos leer el Aviso de Privacidad que se encuentra en la página www.997811_mipolici_cdmx.com.mx, por lo que al firmar el presente, manifiesta su total conformidad con el mismo.
+
+
+2.6. Sólo se permitirá el registro a Usuarios trabajadores de la SSPDF en activo.
+
+
+2.7. El registro en el programa como Usuario es gratuito.
+
+
+Es obligatorio insertar el nombre y e-mail del Usuario para poder utilizar los Servicios que brinda la SSPDF. El Usuario en su momento asume el compromiso de actualizar sus datos personales conforme resulte necesario. La SSPDF podrá utilizar diversos medios para identificar a sus Usuarios, pero la SSPDF no se responsabiliza por la fidedignidad de los datos personales provistos por sus Usuarios. Los Usuarios garantizaran y responderán en todo momento de la veracidad, exactitud, vigencia y autenticidad de los datos personales ingresados.
+
+
+Toda la información que facilite el Usuario deberá ser veraz. El Usuario declara que la información que proporcione a la SSPDF, relativa a sus datos personales es verídica y completa. La SSPDF se reserva el derecho de cancelar o suspender la prestación de los servicios a aquel Usuario que hubiera provisto datos falsos o inexactos a la SSPDF. El Usuario será el único responsable de las manifestaciones falsas o inexactas que realice y de los perjuicios que pudiera causar a la SSPDF y/o a terceros en virtud de la información que facilite a la SSPDF.
+
+
+La SSPDF se reserva el derecho de suspender temporal o definitivamente a aquellos Usuarios cuyos datos no hayan podido ser confirmados.
+
+El Usuario accederá a su cuenta personal (en lo sucesivo la “Cuenta”) mediante el ingreso de su seudónimo y clave de seguridad personal elegida (en lo sucesivo la “Clave de Seguridad”). El Usuario se obliga a mantener la confidencialidad de su Clave de Seguridad.
+
+
+
+La Cuenta es personal, única y está prohibido que un mismo Usuario inscriba o posea más de una cuenta. En caso de que la SSPDF detecte distintas cuentas que contengan datos coincidentes o relacionados, podrá cancelar, suspender o inhabilitarlas.
+
+
+
+El Usuario será responsable por todas las operaciones efectuadas en su cuenta, pues el acceso a la misma está restringido al ingreso y uso de su Clave de Seguridad, de conocimiento exclusivo del Usuario. El Usuario se compromete a notificar a la SSPDF en forma inmediata y por medio idóneo y fehaciente, cualquier uso no autorizado de su cuenta, así como el ingreso por terceros no autorizados a la misma. Se aclara que está prohibida la venta, cesión o transferencia de la cuenta (incluyendo la reputación y calificaciones) bajo ningún título.
+
+
+
+La SSPDF se reserva el derecho de rechazar cualquier solicitud de inscripción o de cancelar una inscripción previamente aceptada, sin que esté obligado a comunicar o exponer las razones de su decisión y sin que ello genere algún derecho a indemnización o resarcimiento.
+
+
+3. CONDICIONES PARA INGRESAR AL PROGRAMA
+
+
+3.1. Para el debido ingreso al Programa a través del Sitio y/o los Medios Electrónicos, los Usuarios deberán contar con equipos e instalaciones necesarias para su conexión a Internet (computadora, teléfono, modem, programas, aplicaciones, etc.), siendo el uso de estos equipos total responsabilidad de ellos mismos.
+
+
+3.2. La SSPDF está exento de cualquier responsabilidad que ocurra por interrupciones o suspensiones del servicio de acceso a Internet ocasionadas por la falla en el sistema de telecomunicaciones, en el suministro de energía eléctrica, casos fortuitos o de fuerza mayor o una acción de terceros que puedan inhabilitar los equipos que suministran el acceso a la red.
+
+
+Por lo anterior, la SSPDF no se responsabiliza por cualquier daño, perjuicio o pérdida al Usuario causados por fallas en el sistema, en el servidor o en Internet. la SSPDF tampoco será responsable por cualquier virus que pudiera infectar el equipo del Usuario como consecuencia del acceso, uso o examen del Sitio y/o los Medios Electrónicos o a raíz de cualquier transferencia de datos, archivos, imágenes, textos, o audio contenidos en los mismos. Los Usuarios NO podrán imputarle responsabilidad alguna ni exigir pago de daños o perjuicios, en virtud de dificultades técnicas o fallas en los sistemas o en Internet. El sistema puede eventualmente no estar disponible debido a dificultades técnicas o fallas de Internet, o por cualquier otra circunstancia ajena a la SSPDF; en tales casos se procurará restablecerlo con la mayor celeridad posible sin que por ello pueda imputársele algún tipo de responsabilidad.
+
+
+
+4. BENEFICIOS
+
+
+4.1. La SSPDF informará a los Usuarios, a través del Sitio y/o los Medios Electrónicos, pero también a través de medios impresos, telefónicos y digitales, todas las promociones y oportunidades futuras para obtener ciertas recompensas, con las respectivas fechas y condiciones, en el entendido de que en caso de que el Usuario decida ejercer la promoción para obtener cierto beneficio deberá de presentar su tarjeta de descuentos y beneficios Mi Policía ante el comercio que corresponda para obtener el beneficio.
+
+
+4.2. El Sitio y/o los Medios Electrónicos son seguros y todas las informaciones que pasan por esos medios, desde la contraseña personal, hasta los datos personales, están codificadas. El símbolo candado cerrado, presente en la parte inferior de la pantalla, garantiza que el ambiente del Sitio es seguro.
+
+
+5. PLAZO DE VIGENCIA Y TERMINACIÓN Y RESCISIÓN CONTRATUAL
+
+
+5.1. El plazo de vigencia de los presentes Términos y Condiciones de Uso es indefinido.
+
+
+5.2. El Usuario podrá en cualquier momento solicitar la cancelación de su registro por medio de una carta autógrafa que deberá ser entregada en las oficinas de la Dirección General de Administración de Personal de la SSPDF, solicitando su exclusión del registro, sin perjuicio de las obligaciones asumidas hasta la fecha de su exclusión y teniendo la SSPDF un periodo de 30 días hábiles para realizar dicha exclusión.
+
+
+5.3. La SSPDF podrá cancelar unilateralmente dicho registro, mediante una notificación al Usuario por medios electrónicos surtiendo efectos en forma inmediata.
+
+
+5.4. La terminación de los presentes Términos y Condiciones en virtud de lo dispuesto en los puntos 5.2 y 5.3 antes mencionados, no implicará en ningún caso para la SSPDF, que exista alguna causal para indemnizar al Usuario así como ningún tipo de responsabilidad civil.
+
+
+5.5. La SSPDF y el Usuario reconocen que podrán rescindir el presente instrumento sin necesidad de declaración judicial previa, si cualquiera de ellos incumple con cualquiera de los Términos y Condiciones de Uso contemplados en este documento.
+
+
+6. COMPROMISO
+
+
+6.1. La SSPDF se compromete a seguir las normas de privacidad y seguridad en términos de la Ley, el Reglamento y los Lineamientos, respetando la privacidad de los Usuarios y la confidencialidad de la información otorgada, no divulgando datos personales relativos a los registros, excepto en los siguientes casos: (I) Para cumplir disposición legal u orden de autoridad judicial; (II) Para cumplir cualquier procedimiento instaurado por cualquier órgano competente; (III) Para hacer cumplir los términos de los Servicios; (IV) Para responder reclamaciones de que tal contenido viole derechos de terceros o para proteger los interés de la SSPDF o de terceros; (V) Si hubiera necesidad de identificar y resolver problemas técnicos; (VI) Para cumplir con los objetivos del Programa.
+
+
+6.2. La SSPDF no se responsabiliza, en ninguna caso, por fraudes originados fuera o a través del sistema de los Usuarios y de sus computadoras, principalmente en relación a informaciones proporcionadas, sea en el registro o en el sistema.
+
+
+Bajo ninguna circunstancia la SSPDF, sus empleados, proveedores, contratantes, directores o agentes serán responsables de cualquier daño, ya sea directo o indirecto, que resulte del uso inapropiado del Sitio, incluyendo pero no limitándose al uso del contenido y/o Servicios ofrecidos a través del Sitio y/o los Medios Electrónicos.
+
+
+
+EL USO QUE USTED DÉ AL SITIO Y/O LOS MEDIOS ELECTRÓNICOS ES BAJO SU PROPIO RIESGO. EL CONTENIDO SE PROPORCIONA “COMO ESTÁ” Y SIN NINGUNA GARANTÍA DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO, DE MANERA ENUNCIATIVA MÁS NO LIMITATIVA, CUALQUIER GARANTÍA DE EXPECTATIVA DE PRIVACIDAD IMPLÍCITA, PROPIEDAD PARA UN PROPÓSITO EN PARTICULAR, COMERCIABILIDAD, INFRACCIÓN A LEYES O PROPIEDAD. EN NINGÚN CASO, LA SSPDF O SUS BENEFACTOTES SERÁN RESPONSABLES DE NINGÚN DAÑO (YA SEA EN CONSECUENCIA, DIRECTO, INCIDENTAL, INDIRECTO, PUNITIVO, ESPECIAL O DE ALGUNA OTRA MANERA) QUE SE DERIVE DE O SE RELACIONE CON EL USO DE O LA INCAPACIDAD DE USAR EL SITIO O Y/O LOS MEDIOS ELECTRÓNICOS O POR CUALQUIER PARTE DEL CONTENIDO OBTENIDO A TRAVÉS DE O DE ALGUNA OTRA MANERA EN RELACIÓN CON EL SITIO Y/O LOS MEDIOS ELECTRÓNICOS. EN CADA CASO, SIN IMPORTAR SI TALES DAÑOS SE BASAN EN CONTRATOS, RESPONSABILIDAD NETA, PERJUICIO U OTRAS TEORÍAS DE RESPONSABILIDAD, Y TAMBIÉN SIN IMPORTAR SI LA SSPDF RECIBIÓ UNA NOTIFICACIÓN REAL O IMPLÍCITA DE QUE ERA POSIBLE QUE SE INCURRIERA EN TALES DAÑOS.
+
+
+
+A través de la aceptación de los Términos y Condiciones de Uso, el Usuario acepta indemnizar y sacar en paz y a salvo a la SSPDF y a sus funcionarios, empleados, proveedores, socios, mandantes y sucesores a título particular autorizados respecto de todos los daños y perjuicios que la SSPDF pudiera sufrir en virtud del incumplimiento por parte del Usuario de: (I) Los Términos y Condiciones de Uso, y/o (II) Cualesquiera leyes, normas, decretos o regulaciones vigentes. La SSPDF se reserva el derecho de asumir la defensa y el control de cualquier asunto o reclamo que implique o pudiera implicar el pago de una indemnización asociada con algún incumplimiento del Usuario. El Usuario se compromete a cooperar con la SSPDF en el desarrollo de las defensas pertinentes.
+
+
+7. OTROS
+
+
+7.1. La aceptación y vinculación, por los Usuarios, a los términos de este instrumento se hará mediante un clic en el ícono “Acepto”.
+
+
+7.2. Cualquier duda sobre el tenor de las disposiciones aquí previstas, podrá ser aclarada en nuestro teléfono de Atención del Sitio web.
+
+
+7.3. Cuando Usted visita www.997811_mipolici_cdmx.com.mx, se está comunicando con nosotros electrónicamente. Por lo tanto Usted acepta recibir comunicados electrónicos de nosotros. Nos comunicaremos con Usted por correo electrónico; a través de avisos en el Sitio y/o los demás Medios Electrónicos, o por medio del Boletín Informativo del Programa. Usted acepta que todos los convenios, avisos, divulgaciones, correos, publicidad y otros comunicados que le enviemos vía electrónica satisfacen los requerimientos legales de que tales comunicados están por escrito.
+
+
+7.4. En el caso de que cualquier cláusula de estos Términos y Condiciones de Uso del Sitio sea declarada nula, las demás cláusulas permanecerán vigentes y serán interpretadas llevándose en consideración la voluntad de las partes y la finalidad de las mismas presentes en el referido término.
+
+
+7.5. La SSPDF podrá no ejercer alguno de los derechos y facultades conferidos en este documento, lo que no implicará en ningún caso la renuncia a los mismos, salvo reconocimiento expreso por parte de la SSPDF, o prescripción de la acción que corresponda a cada caso.
+
+
+8.6. La SSPDF se reserva el derecho de modificar en cualquier momento, la presentación y configuración del Sitio, así como los presentes Términos y Condiciones de Uso. Por eso, la SSPDF recomienda al Usuario lea atentamente dichos Términos y Condiciones de Uso cada vez que acceda al Programa. En cualquier caso, la aceptación de los Términos y Condiciones de Uso será un paso previo e indispensable para la obtención de recompensas inherentes al Programa.
+
+
+7.7. Los presentes Términos y Condiciones de Uso se rigen en todos y cada uno de sus partes por las leyes aplicables de los Estados Unidos Mexicanos. Por su parte, la SSPDF y el Usuario, con renuncia expresa a cualquier otro fuero, se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, Distrito Federal.
+
+
+7.8 Renuncia a indemnizaciones RENUNCIA E INDEMNIZACIÓN.
+
+
+POR MEDIO DEL USO DEL SERVICIO, USTED SE COMPROMETE A LIBERAR DE RESPONSABILIDAD Y SACAR EN PAZ Y A SALVO A LA SECRETARÍA DE SEGURIDAD PUBLICA DEL DISTRITO FEDERAL, SUS CONSEJEROS, DIRECTORES, EJECUTIVOS, FUNCIONARIOS, EMPLEADOS, AFILIADOS, AGENTES Y LICENCIANTES CON RESPECTO DE CUALQUIER RECLAMO QUE SURJA DEL INCUMPLIMIENTO DEL PRESENTE CONTRATO, EL USO QUE HAGA DEL SERVICIO, O TODA MEDIDA TOMADA POR LA SECRETARÍA DE SEGURIDAD PUBLICA DEL DISTRITO FEDERAL COMO PARTE DE SU INVESTIGACIÓN DE LA EXISTENCIA DE UN SUPUESTO INCUMPLIMIENTO DEL PRESENTE CONTRATO O COMO RESULTADO DE SU INCUMPLIMIENTO DEL PRESENTE CONTRATO. ELLO SIGNIFICA QUE USTED NO PODRÁ DEMANDAR POR DAÑOS Y PERJUICIOS A LA SECRETARÍA DE SEGURIDAD PUBLICA DEL DISTRITO FEDERAL, SUS CONSEJEROS, FUNCIONARIOS, EMPLEADOS, AFILIADOS, AGENTES Y LICENCIANTES COMO RESULTADO DE SU DECISIÓN DE QUITAR O NEGAR EL PROCESAMIENTO DE CUALQUIER TIPO DE INFORMACIÓN O CONTENIDO, DE ADVERTIRLO, DE SUSPENDER O CANCELAR SU ACCESO AL SERVICIO, O DE TOMAR CUALQUIER OTRA MEDIDA DURANTE LA INVESTIGACIÓN DE UNA SUPUESTA VIOLACIÓN O COMO RESULTADO DE LA CONCLUSIÓN DE LA SECRETARÍA DE SEGURIDAD PUBLICA DEL DISTRITO FEDERAL, EN EL SENTIDO DE QUE HA EXISTIDO UN INCUMPLIMIENTO DEL PRESENTE CONTRATO. ESTA DISPOSICIÓN DE EXENCIÓN DE RESPONSABILIDAD E INDEMNIZACIÓN SE APLICA A TODOS LOS INCUMPLIMIENTOS DESCRITOS, DERIVADOS DE O CONTEMPLADOS EN EL PRESENTE CONTRATO EN LA PAGINA WEB.
+
+
+México, Distrito Federal
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Cq-nf-9YU" firstAttribute="top" secondItem="Pgv-cc-ZDi" secondAttribute="bottom" id="5h6-Z5-UoF"/>
+                            <constraint firstItem="6Cq-nf-9YU" firstAttribute="leading" secondItem="789-HS-0vx" secondAttribute="leading" id="jYq-14-0m0"/>
+                            <constraint firstAttribute="trailing" secondItem="6Cq-nf-9YU" secondAttribute="trailing" id="sbd-Z5-ou1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Políticas de privacidad" id="gWF-2Y-zJ8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3m9-rU-qaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="1198"/>
+        </scene>
+        <!--Búsqueda de vehículos-->
+        <scene sceneID="7uv-jc-3Up">
+            <objects>
+                <viewController id="aR4-PD-2kS" customClass="ControladorBusquedaPlacas" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r0G-GH-UBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bB4-pl-LZZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vGt-v1-sxk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 Número de placa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-4P-in8">
+                                <rect key="frame" x="20" y="157" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-oU-3bX">
+                                <rect key="frame" x="6" y="79" width="308" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IFH-i3-wMi"/>
+                                </constraints>
+                                <string key="text">Ingrese el número de placa para conocer si su vehículo se encuentra en un depósito vehicular (corralón) o en proceso de arrastre:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-fc-iX9">
+                                <rect key="frame" x="20" y="195" width="280" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="UkR-HP-Tio"/>
+                                </constraints>
+                                <state key="normal" title="Búsqueda">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="irP-zH-TIl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyQ-lv-tgP">
+                                <rect key="frame" x="26" y="256" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155522679844" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxZ-BP-ttL">
+                                <rect key="frame" x="26" y="282" width="274" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ds-nn-Zbh">
+                                <rect key="frame" x="26" y="327" width="274" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.30477155519999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muz-8V-5a6">
+                                <rect key="frame" x="26" y="350" width="274" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WyQ-lv-tgP" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="1Ry-ZY-Z6G"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="trailing" secondItem="ehR-fc-iX9" secondAttribute="trailing" id="5nX-ZK-9as"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="centerX" secondItem="G3W-oU-3bX" secondAttribute="centerX" id="ATN-bA-Nhx"/>
+                            <constraint firstItem="G3W-oU-3bX" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="Fzs-Lf-t9O"/>
+                            <constraint firstItem="G3W-oU-3bX" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="Gc7-Nr-SEN"/>
+                            <constraint firstItem="Muz-8V-5a6" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="HJT-5B-LhO"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="QXs-Q1-zwJ"/>
+                            <constraint firstItem="ehR-fc-iX9" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="UAw-Ch-k4A"/>
+                            <constraint firstItem="G3W-oU-3bX" firstAttribute="leading" secondItem="vGt-v1-sxk" secondAttribute="leadingMargin" constant="-10" id="azx-Xh-d6V"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="top" secondItem="G3W-oU-3bX" secondAttribute="bottom" constant="8" symbolic="YES" id="cw1-Dw-dfO"/>
+                            <constraint firstItem="G3W-oU-3bX" firstAttribute="top" secondItem="r0G-GH-UBd" secondAttribute="bottom" constant="15" id="jha-MS-0SB"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="leading" secondItem="vGt-v1-sxk" secondAttribute="leadingMargin" constant="4" id="kAf-Ji-E0J"/>
+                            <constraint firstItem="kxZ-BP-ttL" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="pc5-O7-h72"/>
+                            <constraint firstItem="tBl-4P-in8" firstAttribute="leading" secondItem="ehR-fc-iX9" secondAttribute="leading" id="sdT-wp-G3a"/>
+                            <constraint firstItem="3Ds-nn-Zbh" firstAttribute="centerX" secondItem="vGt-v1-sxk" secondAttribute="centerX" id="stj-Ob-kFK"/>
+                            <constraint firstItem="ehR-fc-iX9" firstAttribute="top" secondItem="tBl-4P-in8" secondAttribute="bottom" constant="8" symbolic="YES" id="t9P-hT-don"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Búsqueda de vehículos" id="AXg-jE-0Xw"/>
+                    <connections>
+                        <outlet property="entregaPlaca" destination="3Ds-nn-Zbh" id="KAL-bu-ebK"/>
+                        <outlet property="fechaEntrega" destination="Muz-8V-5a6" id="cTH-md-teD"/>
+                        <outlet property="fechaLlegada" destination="kxZ-BP-ttL" id="aRG-h2-Xeo"/>
+                        <outlet property="nombreDeposito" destination="WyQ-lv-tgP" id="tkd-oK-Le9"/>
+                        <outlet property="placa" destination="tBl-4P-in8" id="1TN-qS-MK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zup-9D-VHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="346"/>
+        </scene>
+        <!--Denuncia-->
+        <scene sceneID="EDC-TM-JHe">
+            <objects>
+                <viewController title="Denuncia" id="Mtm-7f-yE1" customClass="DenunciaViewController" customModule="SwiftMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zch-Rl-6YV"/>
+                        <viewControllerLayoutGuide type="bottom" id="8RC-qD-9b0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6fV-Tm-BhR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UZX-mQ-K99">
+                                <rect key="frame" x="40" y="90" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FTu-vn-VMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono de contacto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDi-g0-Apl">
+                                <rect key="frame" x="40" y="138" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YZF-fU-fkL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Denuncia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJv-R8-BC5">
+                                <rect key="frame" x="40" y="290" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l6p-PC-xFQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssw-9I-g6q">
+                                <rect key="frame" x="20" y="483" width="280" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Myi-ID-zb7"/>
+                                </constraints>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="busquedaPlaca:" destination="aR4-PD-2kS" eventType="touchUpInside" id="vei-0v-TFx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMp-lA-hLG">
+                                <rect key="frame" x="40" y="188" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="JHo-tX-ZJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-kW-hF5">
+                                <rect key="frame" x="85" y="188" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delegación: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abs-qw-7zs">
+                                <rect key="frame" x="40" y="341" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOX-ut-ziK">
+                                <rect key="frame" x="133" y="341" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="F3T-iD-2dU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bsp-17-yzt">
+                                <rect key="frame" x="0.0" y="211" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="khn-KP-0pv"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView tag="2" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3Ia-Ut-x6b">
+                                <rect key="frame" x="0.0" y="370" width="320" height="80"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UDi-g0-Apl" firstAttribute="top" secondItem="UZX-mQ-K99" secondAttribute="bottom" constant="18" id="6Es-j5-EyE"/>
+                            <constraint firstItem="UDi-g0-Apl" firstAttribute="trailing" secondItem="AJv-R8-BC5" secondAttribute="trailing" id="6HX-bE-bcd"/>
+                            <constraint firstItem="bsp-17-yzt" firstAttribute="leading" secondItem="6fV-Tm-BhR" secondAttribute="leading" id="9fR-ao-MTv"/>
+                            <constraint firstItem="kMp-lA-hLG" firstAttribute="leading" secondItem="AJv-R8-BC5" secondAttribute="leading" id="E7U-sN-VZ5"/>
+                            <constraint firstItem="UZX-mQ-K99" firstAttribute="top" secondItem="Zch-Rl-6YV" secondAttribute="bottom" constant="26" id="FbQ-g3-tz7"/>
+                            <constraint firstItem="kMp-lA-hLG" firstAttribute="baseline" secondItem="KFl-kW-hF5" secondAttribute="baseline" id="I1e-9x-8gb"/>
+                            <constraint firstItem="UZX-mQ-K99" firstAttribute="leading" secondItem="6fV-Tm-BhR" secondAttribute="leadingMargin" constant="24" id="J8t-Wd-Rmt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UZX-mQ-K99" secondAttribute="trailing" constant="10" id="Ls8-8J-Y4M"/>
+                            <constraint firstItem="bsp-17-yzt" firstAttribute="leading" secondItem="3Ia-Ut-x6b" secondAttribute="leading" id="PYs-l8-aBm"/>
+                            <constraint firstItem="EOX-ut-ziK" firstAttribute="baseline" secondItem="abs-qw-7zs" secondAttribute="firstBaseline" id="T1O-ye-ssB"/>
+                            <constraint firstItem="abs-qw-7zs" firstAttribute="top" secondItem="AJv-R8-BC5" secondAttribute="bottom" constant="21" id="T9H-Zr-y6V"/>
+                            <constraint firstItem="UZX-mQ-K99" firstAttribute="trailing" secondItem="UDi-g0-Apl" secondAttribute="trailing" id="V1h-8I-i7T"/>
+                            <constraint firstItem="AJv-R8-BC5" firstAttribute="top" secondItem="bsp-17-yzt" secondAttribute="bottom" constant="15" id="VaH-Tz-IRT"/>
+                            <constraint firstItem="KFl-kW-hF5" firstAttribute="baseline" secondItem="kMp-lA-hLG" secondAttribute="firstBaseline" id="W92-Sa-VZ8"/>
+                            <constraint firstItem="abs-qw-7zs" firstAttribute="baseline" secondItem="EOX-ut-ziK" secondAttribute="baseline" id="WFk-qE-q7b"/>
+                            <constraint firstItem="KFl-kW-hF5" firstAttribute="leading" secondItem="kMp-lA-hLG" secondAttribute="trailing" constant="3" id="Z8n-XQ-fxE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KFl-kW-hF5" secondAttribute="trailing" constant="41" id="beF-BF-72w"/>
+                            <constraint firstItem="3Ia-Ut-x6b" firstAttribute="centerX" secondItem="Ssw-9I-g6q" secondAttribute="centerX" id="d9I-mV-H06"/>
+                            <constraint firstItem="Ssw-9I-g6q" firstAttribute="top" secondItem="3Ia-Ut-x6b" secondAttribute="bottom" constant="33" id="elG-Ct-4nJ"/>
+                            <constraint firstItem="kMp-lA-hLG" firstAttribute="top" secondItem="UDi-g0-Apl" secondAttribute="bottom" constant="20" id="fS6-Td-XtW"/>
+                            <constraint firstItem="bsp-17-yzt" firstAttribute="top" secondItem="kMp-lA-hLG" secondAttribute="bottom" constant="2" id="fUi-9e-wvi"/>
+                            <constraint firstItem="AJv-R8-BC5" firstAttribute="leading" secondItem="abs-qw-7zs" secondAttribute="leading" id="fn4-U9-Sq4"/>
+                            <constraint firstItem="8RC-qD-9b0" firstAttribute="top" secondItem="Ssw-9I-g6q" secondAttribute="bottom" constant="46" id="gGL-S8-Sw7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOX-ut-ziK" secondAttribute="trailing" constant="18" id="j8n-i0-mGt"/>
+                            <constraint firstItem="3Ia-Ut-x6b" firstAttribute="centerX" secondItem="6fV-Tm-BhR" secondAttribute="centerX" id="jBf-P2-vQ4"/>
+                            <constraint firstItem="UDi-g0-Apl" firstAttribute="leading" secondItem="kMp-lA-hLG" secondAttribute="leading" id="lKm-L5-SLy"/>
+                            <constraint firstItem="3Ia-Ut-x6b" firstAttribute="top" secondItem="abs-qw-7zs" secondAttribute="bottom" constant="8" symbolic="YES" id="m6M-o5-2V8"/>
+                            <constraint firstItem="bsp-17-yzt" firstAttribute="centerX" secondItem="6fV-Tm-BhR" secondAttribute="centerX" id="mkM-PM-aGD"/>
+                            <constraint firstItem="Ssw-9I-g6q" firstAttribute="leading" secondItem="6fV-Tm-BhR" secondAttribute="leadingMargin" constant="4" id="tiE-au-uYN"/>
+                            <constraint firstItem="UZX-mQ-K99" firstAttribute="leading" secondItem="UDi-g0-Apl" secondAttribute="leading" id="zWT-EL-yBi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nueva Denuncia" id="0vz-5L-IzL"/>
+                    <connections>
+                        <outlet property="etiquetaDelegacion" destination="EOX-ut-ziK" id="u3z-y0-TV1"/>
+                        <outlet property="etiquetaTipo" destination="KFl-kW-hF5" id="mRj-x0-y70"/>
+                        <outlet property="selectDelegacion" destination="3Ia-Ut-x6b" id="fIS-ll-60G"/>
+                        <outlet property="selectTipo" destination="bsp-17-yzt" id="osx-mQ-Men"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT3-Zr-FjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kwk-iR-LgA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SDO-gx-B1o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nEU-9z-9f4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vhj-4s-5RT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvz-1r-kCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="corralon" width="300" height="262"/>
+        <image name="policia" width="300" height="300"/>
+        <image name="telefono" width="300" height="291"/>
+    </resources>
+</document>

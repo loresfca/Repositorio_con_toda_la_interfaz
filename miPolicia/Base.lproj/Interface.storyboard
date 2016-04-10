@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IG4-bw-UQq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Picker Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="PickerInterfaceController" customModule="miPolicia_Extension">
+                    <items>
+                        <label alignment="left" text="Ingrese su placa:" id="i7M-Vy-Qde"/>
+                        <group width="1" alignment="left" id="DLU-v8-EVg">
+                            <items>
+                                <picker width="42" height="40" alignment="left" id="8ge-Wo-YL4">
+                                    <connections>
+                                        <action selector="p1Changed:" destination="AgC-eL-Hgc" id="x8m-yc-gh5"/>
+                                    </connections>
+                                </picker>
+                                <picker width="42" height="40" alignment="left" id="d1p-RZ-mgv">
+                                    <connections>
+                                        <action selector="p2Changed:" destination="AgC-eL-Hgc" id="ZA7-ux-HSM"/>
+                                    </connections>
+                                </picker>
+                                <picker width="42" height="40" alignment="left" id="5qm-sF-iYg">
+                                    <connections>
+                                        <action selector="p3Changed:" destination="AgC-eL-Hgc" id="mmD-4T-KlV"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="iR4-WG-XhH">
+                            <items>
+                                <picker width="42" height="40" alignment="left" id="h0F-9Y-RVn">
+                                    <connections>
+                                        <action selector="p4Changed:" destination="AgC-eL-Hgc" id="0fd-vk-ZE2"/>
+                                    </connections>
+                                </picker>
+                                <picker width="42" height="40" alignment="left" id="GFV-3T-49R">
+                                    <connections>
+                                        <action selector="p5Changed:" destination="AgC-eL-Hgc" id="yYY-Dm-7en"/>
+                                    </connections>
+                                </picker>
+                                <picker width="42" height="40" alignment="left" id="Ab5-Ao-gbh">
+                                    <connections>
+                                        <action selector="p6Changed:" destination="AgC-eL-Hgc" id="7uX-Gg-Ff6"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Ir" id="Spc-2t-vtF">
+                            <connections>
+                                <action selector="placaEnviada" destination="AgC-eL-Hgc" id="M0D-p2-k28"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="p1" destination="8ge-Wo-YL4" id="BNI-cI-NFr"/>
+                        <outlet property="p2" destination="d1p-RZ-mgv" id="Bz6-nv-wr8"/>
+                        <outlet property="p3" destination="5qm-sF-iYg" id="4kb-hX-ToO"/>
+                        <outlet property="p4" destination="h0F-9Y-RVn" id="cPf-bi-yiT"/>
+                        <outlet property="p5" destination="GFV-3T-49R" id="aq8-Uv-5GQ"/>
+                        <outlet property="p6" destination="Ab5-Ao-gbh" id="Qvv-ND-UCr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="455" y="251"/>
+        </scene>
+        <!--SecondScreen-->
+        <scene sceneID="eIC-L5-mNn">
+            <objects>
+                <controller identifier="SecondScreen" id="xjE-yx-96G" customClass="CorralonInterfaceController" customModule="miPolicia_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="0u5-4G-zfr"/>
+                        <label alignment="left" text="Label" id="rkS-g4-OwQ"/>
+                        <label alignment="left" text="Label" id="Q0X-Jj-uli"/>
+                        <label alignment="left" text="Label" id="86W-XS-sjO"/>
+                        <label alignment="left" text="Label" id="A6T-15-HB4"/>
+                    </items>
+                    <connections>
+                        <outlet property="depositoLabel" destination="rkS-g4-OwQ" id="dzZ-7O-rEk"/>
+                        <outlet property="entrega" destination="86W-XS-sjO" id="VIF-uM-8Uv"/>
+                        <outlet property="fEntregaLabel" destination="A6T-15-HB4" id="2Vq-hu-KEo"/>
+                        <outlet property="fechaElabel" destination="Q0X-Jj-uli" id="coO-IX-JSw"/>
+                        <outlet property="placaLabel" destination="0u5-4G-zfr" id="Fnb-T2-Gub"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="730" y="251"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pvb-cX-m9w">
+            <objects>
+                <controller id="IG4-bw-UQq">
+                    <items>
+                        <button alignment="center" id="z8f-SD-ow7">
+                            <group key="contentGroup" width="130" height="31" alignment="left" contentMode="center" id="PUp-BK-Eea">
+                                <items>
+                                    <imageView width="30" height="27" alignment="center" verticalAlignment="center" image="Icon-98" id="t7r-Nt-JR2"/>
+                                    <label width="74" height="29.5" alignment="center" verticalAlignment="center" text="Corralón" id="EFs-rV-iez">
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </items>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </group>
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" identifier="FirstSegue" id="rOY-uI-dxi"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="251"/>
+        </scene>
+    </scenes>
+</document>

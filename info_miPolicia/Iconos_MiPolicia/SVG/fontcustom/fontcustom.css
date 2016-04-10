@@ -1,0 +1,59 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.eot");
+  src: url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.eot?#iefix") format("embedded-opentype"),
+       url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.woff") format("woff"),
+       url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.ttf") format("truetype"),
+       url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("./fontcustom_4e3f9fe93fbbedc1f466e2ae0d950cc2.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-burbujas_conver-01:before,
+.icon-coche-01:before,
+.icon-escudo-01:before,
+.icon-estrella-01:before,
+.icon-informacion-01:before,
+.icon-pointer-01:before,
+.icon-policia-01:before,
+.icon-policia_turistica-01:before,
+.icon-telefono-01:before,
+.icon-urgente-01:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-burbujas_conver-01:before { content: "\f100"; }
+.icon-coche-01:before { content: "\f101"; }
+.icon-escudo-01:before { content: "\f102"; }
+.icon-estrella-01:before { content: "\f103"; }
+.icon-informacion-01:before { content: "\f104"; }
+.icon-pointer-01:before { content: "\f105"; }
+.icon-policia-01:before { content: "\f106"; }
+.icon-policia_turistica-01:before { content: "\f107"; }
+.icon-telefono-01:before { content: "\f108"; }
+.icon-urgente-01:before { content: "\f109"; }

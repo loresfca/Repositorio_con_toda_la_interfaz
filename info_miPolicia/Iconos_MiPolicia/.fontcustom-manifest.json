@@ -1,0 +1,50 @@
+{
+  "checksum": {
+    "previous": "b02f58c2bc64eabd4bc31ea6f9997f8b7576955d91eb861631c9f97ab77eea8d",
+    "current": "b02f58c2bc64eabd4bc31ea6f9997f8b7576955d91eb861631c9f97ab77eea8d"
+  },
+  "fonts": [
+    "fontcustom/fontcustom_b02f58c2bc64eabd4bc31ea6f9997f8b.ttf",
+    "fontcustom/fontcustom_b02f58c2bc64eabd4bc31ea6f9997f8b.svg",
+    "fontcustom/fontcustom_b02f58c2bc64eabd4bc31ea6f9997f8b.woff",
+    "fontcustom/fontcustom_b02f58c2bc64eabd4bc31ea6f9997f8b.eot"
+  ],
+  "glyphs": {
+    "turismo": {
+      "codepoint": 61696,
+      "source": "/Users/laboratorioparalaciudad/Documents/LABPLC_2014/MI POLICIA/Iconos_MiPolicia/turismo.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "/Users/laboratorioparalaciudad/Documents/LABPLC_2014/MI POLICIA/Iconos_MiPolicia",
+      "vectors": "/Users/laboratorioparalaciudad/Documents/LABPLC_2014/MI POLICIA/Iconos_MiPolicia"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
+  ]
+}
