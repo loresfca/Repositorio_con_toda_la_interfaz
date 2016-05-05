@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IG4-bw-UQq">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IG4-bw-UQq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
@@ -65,7 +65,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="455" y="251"/>
+            <point key="canvasLocation" x="542" y="164"/>
         </scene>
         <!--SecondScreen-->
         <scene sceneID="eIC-L5-mNn">
@@ -87,7 +87,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="730" y="251"/>
+            <point key="canvasLocation" x="742" y="164"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="pvb-cX-m9w">
@@ -95,7 +95,7 @@
                 <controller id="IG4-bw-UQq">
                     <items>
                         <button alignment="center" id="z8f-SD-ow7">
-                            <group key="contentGroup" width="130" height="31" alignment="left" contentMode="center" id="PUp-BK-Eea">
+                            <group key="contentGroup" width="134" height="31" alignment="left" contentMode="center" id="PUp-BK-Eea">
                                 <items>
                                     <imageView width="30" height="27" alignment="center" verticalAlignment="center" image="Icon-98" id="t7r-Nt-JR2"/>
                                     <label width="74" height="29.5" alignment="center" verticalAlignment="center" text="Corralón" id="EFs-rV-iez">
@@ -108,10 +108,163 @@
                                 <segue destination="AgC-eL-Hgc" kind="push" identifier="FirstSegue" id="rOY-uI-dxi"/>
                             </connections>
                         </button>
+                        <button alignment="left" id="ROU-zj-lBJ">
+                            <group key="contentGroup" width="1" height="33.5" alignment="left" id="9Wj-AA-lpl">
+                                <items>
+                                    <imageView width="30" height="27" alignment="center" image="poli" id="nQP-RC-14g"/>
+                                    <label width="87.5" height="29.5" alignment="center" text=" Facultados" id="LLK-Ix-7my">
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </items>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </group>
+                            <connections>
+                                <segue destination="o40-Ze-Mb3" kind="push" id="nGV-c3-jhV"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="251"/>
+        </scene>
+        <!--Controlador Facultados-->
+        <scene sceneID="lCe-7P-hGf">
+            <objects>
+                <controller id="o40-Ze-Mb3" customClass="ControladorFacultados" customModule="miPolicia_Extension">
+                    <items>
+                        <group width="1" height="43.5" alignment="left" id="JQI-WS-fuc">
+                            <items>
+                                <label width="136" height="57.5" alignment="left" text="Facultados para infraccionar:" textAlignment="left" numberOfLines="4" id="AGj-B0-ZTJ">
+                                    <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="134" height="61.5" alignment="left" id="vBB-9E-CWK">
+                            <items>
+                                <label width="73" height="69.5" alignment="left" text="Apellido (primera letra):" numberOfLines="3" id="Koy-O3-l6H">
+                                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <group width="57" height="64" alignment="left" id="bh0-TJ-qFe">
+                                    <items>
+                                        <picker width="53" height="62" alignment="left" id="1RY-fY-G4c">
+                                            <connections>
+                                                <action selector="cambioPicker1:" destination="o40-Ze-Mb3" id="T7O-Zz-ohu"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="136" height="62.5" alignment="left" id="2Ka-TE-cOm">
+                            <items>
+                                <label width="72" height="71.5" alignment="left" text="Número placa (inicial):" numberOfLines="3" id="atV-hA-3u8">
+                                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <group width="57" height="64" alignment="left" id="Gfi-y5-258">
+                                    <items>
+                                        <picker width="53" height="62" alignment="left" id="N6f-3S-3wx">
+                                            <connections>
+                                                <action selector="cambioPicker2:" destination="o40-Ze-Mb3" id="UGg-Qc-QkT"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <button alignment="left" id="U2z-4W-TN3">
+                            <group key="contentGroup" width="136" height="31" alignment="left" id="w9F-w9-Ucc">
+                                <items>
+                                    <imageView width="29" height="31" alignment="center" image="buscar" id="ILz-Zt-d6s"/>
+                                    <label width="72" height="38.5" alignment="center" text="BUSCAR" id="f8c-OZ-yi2">
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </items>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </group>
+                            <connections>
+                                <action selector="buscarFacultado" destination="o40-Ze-Mb3" id="V9d-cM-sCY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker1" destination="1RY-fY-G4c" id="irU-ec-cAX"/>
+                        <outlet property="picker2" destination="N6f-3S-3wx" id="GjK-kX-TPn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="412" y="699.75"/>
+        </scene>
+        <!--TablaFacultados-->
+        <scene sceneID="5WJ-JO-S0s">
+            <objects>
+                <controller identifier="TablaFacultados" id="IQK-0A-fSg" customClass="ControladorTablaFacultados" customModule="miPolicia_Extension">
+                    <items>
+                        <table alignment="left" id="qOG-G5-ei9">
+                            <items>
+                                <tableRow identifier="renglones" id="2fQ-W3-vWh" customClass="ControladorRenglones" customModule="miPolicia_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="b5t-u4-OSu">
+                                        <items>
+                                            <label width="130.5" height="44.5" alignment="left" text="Label" id="xKW-ja-Eq6"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="UEO-Lk-z96" kind="push" id="Ele-CT-OzF"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="xKW-ja-Eq6" id="s6a-es-L3A"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tabla" destination="qOG-G5-ei9" id="Ymx-X3-sS9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="699" y="601"/>
+        </scene>
+        <!--DetallesResultados-->
+        <scene sceneID="l2m-Fh-8Rm">
+            <objects>
+                <controller identifier="DetallesResultados" id="UEO-Lk-z96" customClass="ControladorDetallesResultadosInterfaceController" customModule="miPolicia_Extension">
+                    <items>
+                        <group width="57" alignment="left" id="orG-Km-oI6">
+                            <items>
+                                <label width="103" alignment="left" text="Agente:" id="1dT-vU-jj0">
+                                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="56.5" alignment="left" id="uV4-IP-ytQ">
+                            <items>
+                                <label width="136" height="60.5" alignment="left" text="Label" numberOfLines="4" id="Xla-mo-THK"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="InR-rV-cXl">
+                            <items>
+                                <label alignment="left" text="Placa:" id="D1C-b7-vp7">
+                                    <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label width="76.5" alignment="left" text="Label" id="B7v-3s-T8V"/>
+                            </items>
+                        </group>
+                        <group width="46" alignment="center" id="bZC-Fg-N2l">
+                            <items>
+                                <imageView width="54" height="43" alignment="center" image="poli2" id="Ode-nA-kof">
+                                    <color key="tintColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                            </items>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="nombreAgente" destination="Xla-mo-THK" id="jsy-sX-19I"/>
+                        <outlet property="placaAgente" destination="B7v-3s-T8V" id="NBB-Fu-q8H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1025" y="572"/>
         </scene>
     </scenes>
 </document>
